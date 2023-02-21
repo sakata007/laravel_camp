@@ -7,5 +7,8 @@
     {{-- この部分が{{ $slot }}に差し込まれる --}}
     コンポーネントテスト１
 
-    <x-tests.card title="タイトル" content="本文" />
+    {{-- 属性を渡すパターン --}}
+    <x-tests.card title="タイトル" content="本文" :message="$message"/>
+    <x-tests.card title="タイトル"/>
+    <x-tests.card title="cssを変更したい" class="bg-red-300"/>
 </x-tests.app>
