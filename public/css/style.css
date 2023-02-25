@@ -1,0 +1,14 @@
+.container {
+  width: 90vw;
+  background-color: red;
+}
+
+.flex {
+  display: flex;
+  width: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex img {
+  width: 100%;
+}

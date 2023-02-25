@@ -1,0 +1,16 @@
+.container {
+    width: 90vw;
+    background-color: red;
+}
+
+.flex {
+    display: flex;
+    width: flex;
+    // max-width: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    img {
+        width: 100%;
+    }
+}
+
