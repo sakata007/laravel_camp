@@ -44,7 +44,8 @@ Route::prefix('product-image')->group(function() {
     Route::get('/', [ProductImageController::class, 'index'])->name('product-image.index');
     Route::get('/create', [ProductImageController::class, 'create'])->name('product-image.create');
     Route::post('/', [ProductImageController::class, 'store'])->name('product-image.store');
-    Route::get('/{product-image}', [ProductImageController::class, 'show'])->name('product-image.show');
+    // Route::get('/{product-image}', [ProductImageController::class, 'show'])->name('product-image.show');
+    Route::get('/{product-image}', [ProductImageController::class, 'edit'])->name('product-image.edit');
 });
 
 require __DIR__.'/auth.php';
