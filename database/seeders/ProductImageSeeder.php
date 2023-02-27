@@ -15,22 +15,22 @@ class ProductImageSeeder extends Seeder
     {
         DB::table('product_images')->insert([
             [
-                'filename' => 'sample1.jpg'
+                'filename' => 'sample1.jpg',
             ],
             [
-                'filename' => 'sample2.jpg'
+                'filename' => 'sample2.jpg',
             ],
             [
-                'filename' => 'sample3.jpg'
+                'filename' => 'sample3.jpg',
             ],
             [
-                'filename' => 'sample4.jpg'
+                'filename' => 'sample4.jpg',
             ],
             [
-                'filename' => 'sample5.jpg'
+                'filename' => 'sample5.jpg',
             ],
             [
-                'filename' => 'sample6.jpg'
+                'filename' => 'sample6.jpg',
             ],
         ]);
     }

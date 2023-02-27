@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComponentTestController;
 use App\Http\Controllers\LifeCycleTestController;
 use App\Http\Controllers\ProductImageController;
+use App\Models\Product;
 use App\Models\ProductImage;
 
 /*
@@ -44,8 +45,13 @@ Route::prefix('product-image')->group(function() {
     Route::get('/', [ProductImageController::class, 'index'])->name('product-image.index');
     Route::get('/create', [ProductImageController::class, 'create'])->name('product-image.create');
     Route::post('/', [ProductImageController::class, 'store'])->name('product-image.store');
-    // Route::get('/{product-image}', [ProductImageController::class, 'show'])->name('product-image.show');
-    Route::get('/{product-image}', [ProductImageController::class, 'edit'])->name('product-image.edit');
+    Route::get('/{image}/edit', [ProductImageController::class, 'edit'])->name('product-image.edit');
+    Route::post('/{image}', [ProductImageController::class, 'update'])->name('product-image.update');
+    Route::delete('/{image}', [ProductImageController::class, 'destroy'])->name('product-image.destory');
+});
+
+Route::prefix('product')->group(function() {
+    Route::resource('product', ProductController::class);
 });
 
 require __DIR__.'/auth.php';
